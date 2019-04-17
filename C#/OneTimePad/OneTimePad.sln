@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTimePad", "OneTimePad\OneTimePad.csproj", "{3D6265FB-E638-4EDF-8744-41E65C3F5F8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OntTimePad.Utils", "OntTimePad.Utils\OntTimePad.Utils.csproj", "{8A4BFC90-C876-4538-8FF4-591985515FAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OntTimePad.Lib", "OntTimePad.Utils\OntTimePad.Lib.csproj", "{8A4BFC90-C876-4538-8FF4-591985515FAD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTimePad.Tests", "OneTimePad.Tests\OneTimePad.Tests.csproj", "{20A12714-8BF5-4295-B7A0-C9ED8E62D470}"
 EndProject
