@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OntTimePad.Utils\OntTimePad.Lib.csproj" />
+    <ProjectReference Include="..\OneTimePad.Lib\OneTimePad.Lib.csproj" />
   </ItemGroup>
 
 </Project>

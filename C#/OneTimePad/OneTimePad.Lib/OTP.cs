@@ -9,17 +9,17 @@ namespace OneTimePad.Lib
         private static Random random = new Random();
         public string Generate(int keyLengthInBytes)
         {
-            return "Here's a string. Not so random.";
+            return "Not a random string";
         }
 
         public string Encrypt(string key, string message)
         {
-            return "This is not encrypted";
+            return "Hardly encrypted";
         }
 
         public string Decrypt(string key, string cipherText)
         {
-            return "I wonder what the original message was?";
+            return "Wonder what the original message was?";
         }
     }
 }

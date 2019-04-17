@@ -21,7 +21,6 @@ namespace OneTimePad
             Console.WriteLine();
             Console.WriteLine($"Decrypted Message = {decryptedMessage}");
 
-
             Console.ReadLine();
         }
     }
