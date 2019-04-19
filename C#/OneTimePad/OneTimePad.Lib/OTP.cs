@@ -14,13 +14,10 @@ namespace OneTimePad.Lib
             // not just any old bytes (that's why the random.NextBytes() was not working)
             int asciiCharacterStart = 65; // from which ascii character code the generation should start
             int asciiCharacterEnd = 122; // to which ascii character code the generation should end
-            var result = new Char[keyLengthInBytes];
-            for(int i = 0; i < keyLengthInBytes; i++)
-            {
-                result[i] = (char)(random.Next(asciiCharacterStart, asciiCharacterEnd + 1) % 255);
-            }
-
-            return new string(result);
+            return new string(
+                Enumerable.Range(0, keyLengthInBytes)
+                    .Select(i => (char)(random.Next(asciiCharacterStart, asciiCharacterEnd + 1) % 255))
+                    .ToArray());
         }
 
         public string Encrypt(string key, string message)
@@ -35,14 +32,10 @@ namespace OneTimePad.Lib
 
         private string ExclusiveOr(string s1, string s2)
         {
-            var s1Chars = s1.ToCharArray();
-            var s2Chars = s2.ToCharArray();
-            var result = new Char[s1Chars.Length];
-            for (var i = 0; i < s1Chars.Length; i++)
-            {
-                result[i] = (char)(s2Chars[i] ^ s1Chars[i]);
-            }
-            return new string(result);
+            return new string(
+                s1.ToCharArray()
+                    .Zip(s2.ToCharArray(), (c1, c2) => (char)(c1 ^ c2))
+                    .ToArray());
         }
     }
 }
